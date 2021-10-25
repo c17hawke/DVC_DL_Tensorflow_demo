@@ -65,7 +65,7 @@ if __name__ == '__main__':
     try:
         logging.info(">>>>> stage two started")
         prepare_base_model(config_path=parsed_args.config, params_path=parsed_args.params)
-        logging.info("stage two completed! base model is created >>>>>")
+        logging.info("stage two completed! base model is created >>>>>\n")
     except Exception as e:
         logging.exception(e)
         raise e

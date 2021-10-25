@@ -45,7 +45,7 @@ if __name__ == '__main__':
     try:
         logging.info(">>>>> stage three started")
         prepare_callbacks(config_path=parsed_args.config, params_path=parsed_args.params)
-        logging.info("stage three completed! callbacks are prepared and saved as binary>>>>>")
+        logging.info("stage three completed! callbacks are prepared and saved as binary>>>>>\n")
     except Exception as e:
         logging.exception(e)
         raise e
