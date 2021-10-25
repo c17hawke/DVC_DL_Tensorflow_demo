@@ -50,3 +50,28 @@ stages:
     - path: artifacts/base_model/updated_VGG16_base_model.h5
       md5: e3f7b5e4d801b51568f13008934d7c5a
       size: 59131968
+  prepare_callbacks:
+    cmd: python src/stage_03_prepare_callbacks.py --config=config/config.yaml --params=params.yaml
+    deps:
+    - path: config/config.yaml
+      md5: 44505ae4f66ac9acc6bd0dce0be32fa2
+      size: 477
+    - path: params.yaml
+      md5: 78735e380dc3339bafe52cc44309b2e4
+      size: 129
+    - path: src/stage_03_prepare_callbacks.py
+      md5: af9b58a864c28ac48a52be3bac2c0792
+      size: 1800
+    - path: src/utils/all_utils.py
+      md5: 0fe9bcc4134f62977696fcc10a5dd5a5
+      size: 998
+    - path: src/utils/callbacks.py
+      md5: 47f9289a47896bc1e89dfce6edcee9d6
+      size: 1530
+    outs:
+    - path: artifacts/callbacks/checkpoint_cb.cb
+      md5: 4c8e41e077167723746afa3d25211387
+      size: 766
+    - path: artifacts/callbacks/tensorboard_cb.cb
+      md5: a9f7879b707123aaa2a5666d260fc064
+      size: 549

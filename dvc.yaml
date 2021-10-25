@@ -22,3 +22,15 @@ stages:
     outs:
       - artifacts/base_model/updated_VGG16_base_model.h5
       - artifacts/base_model/VGG16_base_model.h5
+
+  prepare_callbacks:
+    cmd: python src/stage_03_prepare_callbacks.py --config=config/config.yaml --params=params.yaml
+    deps: 
+      - src/stage_03_prepare_callbacks.py
+      - src/utils/all_utils.py
+      - src/utils/callbacks.py
+      - config/config.yaml
+      - params.yaml
+    outs:
+      - artifacts/callbacks/checkpoint_cb.cb
+      - artifacts/callbacks/tensorboard_cb.cb
