@@ -6,8 +6,7 @@ stages:
       - src/utils/all_utils.py
       - config/config.yaml
     outs:
-      - data/cat
-      - data/dog
+      - data
 
   prepare_base_model:
     cmd: python src/stage_02_prepare_base_model.py --config=config/config.yaml --params=params.yaml
@@ -44,8 +43,7 @@ stages:
       - src/utils/callbacks.py
       - src/utils/data_management.py
       - config/config.yaml
-      - data/cat
-      - data/dog
+      - data
       - artifacts/base_model/updated_VGG16_base_model.h5
       - artifacts/callbacks/checkpoint_cb.cb
       - artifacts/callbacks/tensorboard_cb.cb
