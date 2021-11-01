@@ -23,4 +23,4 @@ jobs:
           pip install -r requirements.txt
           cml-tensorboard-dev --logdir logs --md --name "Go to tensorboard" >> report.md
           cml-send-comment report.md
-          dvc repro
+          dvc repro -v
